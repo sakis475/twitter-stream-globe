@@ -21,13 +21,13 @@ TweetBeacon = function(tweet) {
   this.color = 0xFF0000;
   }
   else if (tweet.sentiment.score >= -1 && tweet.sentiment < 0) {
-    this.color = 0x800080;
+    this.color = 0xFF0000;
   }
   else if (tweet.sentiment.score >= 0 && tweet.sentiment < 1 ) {
-    this.color = 0xFFFF00;
+    this.color = 0xFF0000;
   }
   else if (tweet.sentiment >= 1 ) {
-    this.color = 0x008000;
+    this.color = 0xFF0000;
   }
 
   this.addBeam();
