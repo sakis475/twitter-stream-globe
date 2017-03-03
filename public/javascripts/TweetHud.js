@@ -92,15 +92,35 @@ app.controller('TweetHud', function($scope, $resource, $timeout, $rootScope, $ti
 		
 		var state = 'neutral';
 
-  	if (score < 0) {
+  	if (score <= -1) {
+  		state = 'veryNegative';
+  	}
+  	else if (score > -1 && score < 0) {
   		state = 'negative';
   	}
-  	else if (score > 0) {
-  		state = 'positive';
-  	}
-
+	else if (score > 0 && score <= 1){
+		state= 'positive';
+	}
+	else if (score > 1){
+		state = 'veryPositive';
+	}
 		return state;
 	}
+	/*
+	  if (tweet.sentiment.score <= -1) {
+  this.color = 0xFF0000;    
+  }
+  else if (tweet.sentiment.score > -1  && tweet.sentiment.score <= 0) {
+    this.color = 0x800080;
+  }
+  
+  else if (tweet.sentiment.score > 0 && tweet.sentiment.score <= 1) {
+    this.color = 0xFFFF00;
+  }
+  
+  else if (tweet.sentiment.score > 1) {
+    this.color = 0x008000;
+}/*
 
   /**
    * GET request to stop stream on the server
