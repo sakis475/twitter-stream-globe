@@ -155,6 +155,7 @@
 	  requestAnimationFrame(animate);
     if (stats) stats.begin();
     render();
+		earthMesh.rotation.y =  earthMesh.rotation.y + 0.01;
     if (stats) stats.end();
 	}
 	
@@ -167,11 +168,8 @@
 		
 	  earthMesh.rotation.x = -0.15;	
 	  	
-	  earthMesh.rotation.y =  earthMesh.rotation.y + 0.01;
-		if(earthMesh.rotation.y == 0.02)
-		{
-			 earthMesh.rotation.y =  earthMesh.rotation.y + 0.02;		
-		}
+	  
+		
 	  renderer.autoClear = false;
 	  renderer.clear();
 	  renderer.render( scene, camera );
