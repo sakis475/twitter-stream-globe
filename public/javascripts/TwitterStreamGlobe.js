@@ -58,7 +58,7 @@
 	  var shader = Shaders.earth;
 	  var uniforms = THREE.UniformsUtils.clone(shader.uniforms);
 
-	  uniforms['texture'].value = THREE.ImageUtils.loadTexture('/images/original.jpg');
+	  uniforms['texture'].value = THREE.ImageUtils.loadTexture('/images/dotworld.jpg');
 
 	  var material = new THREE.ShaderMaterial({
 	    uniforms: uniforms,
