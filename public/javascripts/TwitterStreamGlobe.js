@@ -165,7 +165,7 @@
 	function render () {
 		
 		
-	  earthMesh.rotation.x = 0.1;	
+	  earthMesh.rotation.x = -0.2;	
 		if(earthMesh.position.x == 50)
 		{
 			 earthMesh.rotation.y =  earthMesh.rotation.y + 0.01;		
