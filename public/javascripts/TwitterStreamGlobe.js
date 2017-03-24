@@ -168,7 +168,8 @@
 		
 		
 	  earthMesh.rotation.x = -0.15;	
-	  earthMesh.rotation.y +=  0.01;	
+	  earthMesh.rotation.y +=  0.00;
+	  earthMesh.rotation.z = 0.3; 
 	  
 		
 	  renderer.autoClear = false;
