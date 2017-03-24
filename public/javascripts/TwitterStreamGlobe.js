@@ -34,7 +34,7 @@
 
 		camera = new THREE.PerspectiveCamera(FOV, innerWidth / innerHeight, NEAR, FAR);
 		camera.position.set(POS_X, POS_Y, POS_Z);
-		camera.lookAt( new THREE.Vector3(0,300,300) );
+		camera.lookAt( new THREE.Vector3(0,0,0) );
 
 		scene = new THREE.Scene();
 		scene.add(camera);
@@ -163,7 +163,7 @@
 	 */ 
 	function render () {
 		
-		earthMesh.rotation.y = earthMesh.rotation.y + 0.0000;
+		earthMesh.rotation.y = earthMesh.rotation.y + 0.02;
 		
 	  renderer.autoClear = false;
 	  renderer.clear();
