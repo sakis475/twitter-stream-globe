@@ -166,7 +166,7 @@
 		
 		
 	  earthMesh.rotation.y = earthMesh.rotation.y + 0.02;	
-		if(earthMesh.rotation.y == 50)
+		if(earthMesh.rotation.y == earthMesh.rotation.y + 0.02)
 		{
 			 earthMesh.rotation.y = earthMesh.rotation.y + 0.00;		
 		}
