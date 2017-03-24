@@ -151,11 +151,16 @@
 	/**
 	 * Render loop
 	 */
+	earthMesh.rotation.y =  earthMesh.rotation.y + 0.01;
 	function animate () {
 	  requestAnimationFrame(animate);
     if (stats) stats.begin();
     render();
-		earthMesh.rotation.y =  earthMesh.rotation.y + 0.01;
+		
+		if(earthMesh.rotation.y = 0.02)
+		{
+			earthMesh.rotation.y = 0.02;
+		}
     if (stats) stats.end();
 	}
 	
