@@ -162,12 +162,9 @@
 	 * Runs on each animation frame
 	 */ 
 	function render () {
-		if(position.y == 180){
-		earthMesh.rotation.y = earthMesh.rotation.y + 0.00;
-		}
-		else(
+		
 		earthMesh.rotation.y = earthMesh.rotation.y + 0.02;
-			}
+			
 	  renderer.autoClear = false;
 	  renderer.clear();
 	  renderer.render( scene, camera );
