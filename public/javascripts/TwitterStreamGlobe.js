@@ -157,16 +157,21 @@
     render();
     if (stats) stats.end();
 	}
-
+	
+	fuction rotateEarth()
+	{
+		earthMesh.rotation.y = earthMesh.rotation.y + 0.02;	
+	}
 	/**
 	 * Runs on each animation frame
 	 */ 
 	function render () {
 		
-		
+		earthMesh.rotation.y = earthMesh.rotation.y + 0.02;
 			
 	  renderer.autoClear = false;
 	  renderer.clear();
+	  fuction rotateEarth();
 	  renderer.render( scene, camera );
 	}
 
