@@ -34,7 +34,7 @@
 
 		camera = new THREE.PerspectiveCamera(FOV, innerWidth / innerHeight, NEAR, FAR);
 		camera.position.set(POS_X, POS_Y, POS_Z);
-		camera.lookAt( new THREE.Vector3(0,300,0) );
+		camera.lookAt( new THREE.Vector3(0,300,300) );
 
 		scene = new THREE.Scene();
 		scene.add(camera);
