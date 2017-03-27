@@ -57,8 +57,9 @@
 
 	  var shader = Shaders.earth;
 	  var uniforms = THREE.UniformsUtils.clone(shader.uniforms);
-
-	  uniforms['texture'].value = THREE.ImageUtils.loadTexture('/images/lightoffworld2.jpg');
+	 
+	  //change of the texture of the globe
+	  uniforms['texture'].value = THREE.ImageUtils.loadTexture('/images/lightoffworld2.jpg'); 
 
 	  var material = new THREE.ShaderMaterial({
 	    uniforms: uniforms,
@@ -162,7 +163,10 @@
 	 * Runs on each animation frame
 	 */ 
 	function render () {
-
+		
+		//make a better view for the US continent
+		earthMesh.rotation.x = -0.2;
+		//change of the speed rotation of the globe
 		earthMesh.rotation.y = earthMesh.rotation.y + 0.02;
 		
 	  renderer.autoClear = false;
