@@ -33,6 +33,7 @@ TweetPublisher.start = function () {
 	if (!stream) {
 
 		// Connect to stream and filter by a geofence that is the size of the Earth
+		// filter , to allow tweets only from the continent of America
 		stream = twitter.stream('statuses/filter', { locations: '-132,-54,-32,54' });
 
 		// When Tweet is received only process it if it has geo data
