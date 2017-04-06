@@ -50,9 +50,9 @@ TweetBeacon.prototype.addBeam = function () {
   lineGeo.vertices.push(new THREE.Vector3(0, 0, 0));
   lineGeo.vertices.push(new THREE.Vector3(0, 0, 1));
 
-  var lineMat = new THREE.LineBasicMaterial({
+  var lineMat = new THREE.LineBasicMaterial({  //anaferete sto beam
     color: this.color,
-    linewidth: 7,
+    linewidth: 7, 
     opacity: 0.0,
     transparent: true
   });
@@ -113,7 +113,7 @@ TweetBeacon.prototype.show = function () {
   var time = 4;
 
   // Define the line height based on the sentiment score
-  this.beamHeight = 400 + Math.abs(this.tweet.sentiment.score) * 100
+  this.beamHeight = 500 + Math.abs(this.tweet.sentiment.score) * 100
   
   // Animate opacity
   TweenLite.to(this.lineMesh.material, time, {
