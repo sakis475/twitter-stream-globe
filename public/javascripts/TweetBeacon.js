@@ -52,7 +52,7 @@ TweetBeacon.prototype.addBeam = function () {
 
   var lineMat = new THREE.LineBasicMaterial({
     color: this.color,
-    linewidth: 2,
+    linewidth: 7,
     opacity: 0.0,
     transparent: true
   });
