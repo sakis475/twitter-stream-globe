@@ -78,7 +78,7 @@ app.controller('TweetHud', function($scope, $resource, $timeout, $rootScope, $ti
     sentimentScoreTotal = 0;
 
     angular.forEach($scope.tweets, function(tweet, key) {
-      sentimentScoreTotal = sentimentScoreTotal + tweet.sentiment.score;
+      sentimentScoreTotal = 4.0;
     });
 
     $scope.avgSentiment = (Math.round((sentimentScoreTotal / TWEET_SAMPLE_SIZE) * 100) / 100).toFixed(2);
@@ -106,21 +106,7 @@ app.controller('TweetHud', function($scope, $resource, $timeout, $rootScope, $ti
 	}
 		return state;
 	}
-	/*
-	  if (tweet.sentiment.score <= -1) {
-  this.color = 0xFF0000;    
-  }
-  else if (tweet.sentiment.score > -1  && tweet.sentiment.score <= 0) {
-    this.color = 0x800080;
-  }
-  
-  else if (tweet.sentiment.score > 0 && tweet.sentiment.score <= 1) {
-    this.color = 0xFFFF00;
-  }
-  
-  else if (tweet.sentiment.score > 1) {
-    this.color = 0x008000;
-}/*
+
 
   /**
    * GET request to stop stream on the server
