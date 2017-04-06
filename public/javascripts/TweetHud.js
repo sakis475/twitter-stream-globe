@@ -78,7 +78,7 @@ app.controller('TweetHud', function($scope, $resource, $timeout, $rootScope, $ti
     sentimentScoreTotal = 0;
 
     angular.forEach($scope.tweets, function(tweet, key) {
-      sentimentScoreTotal = 5.0;
+      sentimentScoreTotal = sentimentScoreTotal + tweet.sentiment.score;
     });
 
     $scope.avgSentiment = (Math.round((sentimentScoreTotal / TWEET_SAMPLE_SIZE) * 100) / 100).toFixed(2);
